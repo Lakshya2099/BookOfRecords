@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Record</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-100 font-['Helvetica']">
+    <main class="w-full h-screen flex flex-col">
+        <nav class="flex px-10 justify-between py-5 bg-white shadow-md">
+            <h3 class="text-2xl tracking-tight">Record Book</h3>
+            <div class="navlinks flex gap-5">
+                <a class="tracking-tight hover:text-blue-500 transition duration-300" href="/">Home</a>
+                <a class="tracking-tight hover:text-blue-500 transition duration-300" href="/create">Create New Record</a>
+            </div>
+        </nav>
+        <div class="flex-grow px-10 py-10">
+            <h3 class="text-2xl font-medium mb-5 tracking-tight">You're editing record of <span class="text-blue-500">
+                    <%= filename.split(".")[0] %>
+                </span> date</h3>
+            <form action="/update/<%= filename %>" method="post">
+                <textarea class="block w-full px-3 py-2 resize-none bg-zinc-200 rounded-md min-h-96 outline-none"
+                    placeholder="Write your hisaab." name="content"><%= filedata %></textarea>
+                <input type="submit" class="block mt-5 px-5 py-3 bg-blue-500 text-white rounded-md"
+                    value="Update Record">
+            </form>
+        </div>
+    </main>
+    <footer class="bg-white py-4 text-center shadow-md">
+        <p class="text-sm text-zinc-500">&copy; 2024 Recordbook. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
