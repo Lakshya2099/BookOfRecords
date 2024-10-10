@@ -67,6 +67,8 @@ Before you begin, ensure you have met the following requirements:
 
 ## API Endpoints
 
+## Contributing
+Feel free to contribute by opening an issue or submitting a pull request.
 ### Records
 - **GET** `/records` - Retrieve all records
 - **POST** `/records` - Create a new record
