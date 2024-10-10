@@ -73,6 +73,3 @@ Before you begin, ensure you have met the following requirements:
 - **GET** `/records/:id` - Retrieve a specific record by ID
 - **PUT** `/records/:id` - Update a specific record by ID
 - **DELETE** `/records/:id` - Delete a specific record by ID
-
-## Contributing
-Feel free to contribute by opening an issue or submitting a pull request.
